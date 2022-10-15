@@ -1,0 +1,33 @@
+.header{
+    .topNav{
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        .icon{
+            height: 80px;
+            padding: 1%;
+        }
+    }
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        
+    }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .header{
+        .topNav{
+            .icon{
+                height: 50px;
+                padding: 2%;
+            }
+        }
+        .container{
+            width: 95%;
+          
+            
+        }
+    }
+}
+

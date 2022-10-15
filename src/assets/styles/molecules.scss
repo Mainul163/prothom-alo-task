@@ -1,0 +1,80 @@
+.HeadlineComp {
+    border-bottom: 1px solid var(--border-color);
+    margin: var(--space2_6) 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.story-details {
+    position: absolute;
+    margin-left: 10%;
+    justify-content: center;
+
+    .story-title {
+        width: 991px;
+
+    }
+
+    .story-description {
+        font-size: var(--fs-14_6);
+        margin: var(--space2_4) auto 0;
+        --borderColor: var(--primaryColor);
+        color: var(--black);
+        line-height: var(--space2_7);
+        max-width: 768px;
+    }
+
+
+
+    .story-image {
+
+        figure {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+            background: var(--fallback-image-bg);
+            overflow: hidden;
+            object-fit: fill;
+            cursor: text;
+
+            .picture {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        // padding-top: 56.25%;
+
+
+
+
+    }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .story-details {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
+    .story-details {
+        position: initial;
+        margin-left: 0;
+
+        .story-title {
+            width: 100%;
+
+        }
+    }
+
+}
