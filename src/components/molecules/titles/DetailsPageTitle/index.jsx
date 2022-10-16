@@ -7,7 +7,7 @@ const DetailsPageTitle = () => {
   return (
     <div className="HeadlineComp">
       <Subtitle>i am subtitle</Subtitle>
-      <Title>space2_6space2_6space2_space2_6space2_6space2_6space2_6space2_66space2_6space2_6</Title>
+      <Title>বিশ্বের বেশ কয়টি দেশে বর্তমানে প্রেসিডেন্ট পদে দায়িত্ব পালন করছেন নারীরা। </Title>
     </div>
   );
 };
