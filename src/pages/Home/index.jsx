@@ -3,6 +3,7 @@ import DefaultLayout from "../../layout/default";
 import Tab from "../../components/organisms/home/tab";
 import PriorityNews from "../../components/organisms/home/priorityNews";
 import data from "../../data/sample-data1.json";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <DefaultLayout>
@@ -38,10 +39,13 @@ const Home = () => {
         </div>
 
         <div className="footerAdd">
-          <img
+         <Link to='/details'>
+         <img
             src="https://dummyimage.com/991x250/000/fff"
             alt=""
           />
+         
+         </Link>
         </div>
       </div>
     </DefaultLayout>

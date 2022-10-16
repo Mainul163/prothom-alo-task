@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Subtitle from "../../../atoms/typography/subtitle.jsx";
 
 const Tab = ({ content }) => {
@@ -42,8 +43,10 @@ const Tab = ({ content }) => {
               .map((e, i) => (
                 <li key={i}>
                   <div className="tab-Item">
+                    <Link to='/details'>
                     <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                    <p className="headline">{e.headline}</p>
+                    <p className="headline">{e.headline} </p>
+                    </Link>
                   </div>
                 </li>
               ))}
@@ -59,8 +62,10 @@ const Tab = ({ content }) => {
               .map((e, i) => (
                 <li key={i}>
                   <div className="tab-Item">
+                    <Link to='/details'>
                     <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                    <p className="headline">{e.headline}</p>
+                    <p className="headline">{e.headline} </p>
+                    </Link>
                   </div>
                 </li>
               ))}
@@ -76,8 +81,10 @@ const Tab = ({ content }) => {
               .map((e, i) => (
                 <li key={i}>
                 <div className="tab-Item">
-                  <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                  <p className="headline">{e.headline}</p>
+                   <Link to='/details'>
+                    <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
+                    <p className="headline">{e.headline} </p>
+                    </Link>
                 </div>
               </li>
               ))}
