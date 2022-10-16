@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Subtitle from "../../../atoms/typography/subtitle.jsx";
-
+import { Link } from "react-router-dom";
 const Tab = ({ content }) => {
   const [toggleState, setToggleState] = useState(1);
 
@@ -42,12 +41,17 @@ const Tab = ({ content }) => {
               .sort((a, b) => a.sort - b.sort)
               .map((e, i) => (
                 <li key={i}>
-                  <div className="tab-Item">
-                    <Link to='/details'>
-                    <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                    <p className="headline">{e.headline} </p>
-                    </Link>
-                  </div>
+                  {console.log(e)}
+                  <Link to={`/details/latest/${e.id}`}>
+                    <div className="tab-Item">
+                      <span className="order">
+                        {(i + 1)
+                          .toString()
+                          .replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d])}
+                      </span>
+                      <p className="headline">{e.headline}</p>
+                    </div>
+                  </Link>
                 </li>
               ))}
           </ul>
@@ -61,12 +65,16 @@ const Tab = ({ content }) => {
               .sort((a, b) => a.sort - b.sort)
               .map((e, i) => (
                 <li key={i}>
-                  <div className="tab-Item">
-                    <Link to='/details'>
-                    <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                    <p className="headline">{e.headline} </p>
-                    </Link>
-                  </div>
+                  <Link to={`/details/mostread/${e.id}`}>
+                    <div className="tab-Item">
+                      <span className="order">
+                        {(i + 1)
+                          .toString()
+                          .replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d])}
+                      </span>
+                      <p className="headline">{e.headline}</p>
+                    </div>
+                  </Link>
                 </li>
               ))}
           </ul>
@@ -80,13 +88,17 @@ const Tab = ({ content }) => {
               .sort((a, b) => a.sort - b.sort)
               .map((e, i) => (
                 <li key={i}>
-                <div className="tab-Item">
-                   <Link to='/details'>
-                    <span className="order">{(i+1).toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d])}</span>
-                    <p className="headline">{e.headline} </p>
-                    </Link>
-                </div>
-              </li>
+                  <Link to={`/details/discussed/${e.id}`}>
+                    <div className="tab-Item">
+                      <span className="order">
+                        {(i + 1)
+                          .toString()
+                          .replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d])}
+                      </span>
+                      <p className="headline">{e.headline}</p>
+                    </div>
+                  </Link>
+                </li>
               ))}
           </ul>
         </div>

@@ -1,11 +1,12 @@
 import React from "react";
 import DetailsPageTitle from "../../molecules/titles/DetailsPageTitle";
 import Paragraph from "../../atoms/typography/paragraph";
-const Details = () => {
+const Details = ({ content }) => {
+  console.log("--", content)
   return (
     <div className="story-details">
       <div className="story-title">
-      <DetailsPageTitle />
+        <DetailsPageTitle headline={content.headline} subheadline={content.subheadline} />
       </div>
       <div className="story-image">
         <figure>

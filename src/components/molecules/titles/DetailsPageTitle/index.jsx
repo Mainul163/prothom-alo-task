@@ -3,11 +3,11 @@ import "../../../../assets/styles/style.scss";
 import Title from "../../../atoms/typography/title";
 import Subtitle from "../../../atoms/typography/subtitle";
 
-const DetailsPageTitle = () => {
+const DetailsPageTitle = ({ headline, subheadline }) => {
   return (
     <div className="HeadlineComp">
-     
-      <Title>বিশ্বের বেশ কয়টি দেশে বর্তমানে প্রেসিডেন্ট পদে দায়িত্ব পালন করছেন নারীরা। </Title>
+      <Subtitle>{subheadline}</Subtitle>
+      <Title>{headline}</Title>
     </div>
   );
 };
