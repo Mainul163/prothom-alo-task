@@ -11,7 +11,7 @@ const PriorityNews = () => {
           <Highlighted content={data.selected}/>
         </div>
         <div className="listitems">
-          <Regular/>
+          <Regular content={data.selected}/>
         </div>
       </div>
     </div>
