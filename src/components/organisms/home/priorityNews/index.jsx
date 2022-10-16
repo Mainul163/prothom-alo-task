@@ -7,11 +7,17 @@ const PriorityNews = () => {
     <div className="homeSection1_2">
       <div class="flex-container">
         <div className="impImage">
-          {console.log({data})}
-          <Highlighted content={data.selected}/>
+          <div className="add">
+            <img
+              className="image"
+              src="https://dummyimage.com/480x250/000/fff"
+              alt=""
+            />
+          </div>
+          <Highlighted content={data.selected} />
         </div>
         <div className="listitems">
-          <Regular content={data.selected}/>
+          <Regular content={data.selected} />
         </div>
       </div>
     </div>
